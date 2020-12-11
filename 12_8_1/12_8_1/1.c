@@ -69,3 +69,47 @@ int ListInsert(StaticLinkList L, int i, int e)
 	}
 	return 0;
 }
+
+//删除操作
+int ListDelete(StaticLinkList L, int i)
+{
+	int j, k;
+	if (i < 1 || i>ListLength(L))
+	{
+		return 0;
+	}
+	k = MAXSIZE - 1;
+	for (j = 1; j <= i - 1; j++)
+	{
+		k = L[k].cur;
+	}
+	j = L[k].cur;
+	L[k].cur = L[j].cur;
+	Free_SLL(L, j);
+	return 1;
+}
+//将空闲结点回收
+void Free_SLL(StaticLinkList space, int k)
+{
+	space[k].cur = space[0].cur;
+	space[0].cur = k;                                                              
+}
+//获取链表长度
+int ListLength(StaticLinkList L)
+{
+	int j = 0;
+	int i = L[MAXSIZE - 1].cur;
+	while (i)
+	{
+		i = L[i].cur;
+		j++;
+	}
+	return j;
+}
+
+//优点：
+//在插入和删除操作时，只需要修改游标，不需要移动元素
+
+//缺点：
+//没有解决连续存储分配（数组）带来的表长难以确定的问题
+//失去了顺序存储结构随机存取的特性
