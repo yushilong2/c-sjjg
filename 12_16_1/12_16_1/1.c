@@ -7,5 +7,3 @@ linkList Connect(LinkList A, LinkList B)
 	B->next = p;
 	return B;//返回新循环链表的尾指针
 }
-
-//判断单链表是否有环
