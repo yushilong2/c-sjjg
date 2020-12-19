@@ -7,3 +7,4 @@ linkList Connect(LinkList A, LinkList B)
 	B->next = p;
 	return B;//返回新循环链表的尾指针
 }
+//
