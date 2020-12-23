@@ -42,18 +42,32 @@ typedef struct STU
 	int age;
 }mystu;
 */
+#define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
-//用户输入一些数据 int 数组方式来做 -1结束输入
+#include<stdlib.h>
 int main()
 {
-	int arr[50] = { 0 };
-	int count = 0;	//现在有多少个数字
-	int temp = 0;	//工具人 暂存当前输入的数字
+	//用户输入一些数据 int 数组方式来做 -1结束输入
+	//int arr[50] = { 0 };
+	//int count = 0;	//现在有多少个数字
+	//int temp = 0;	//工具人 暂存当前输入的数字
 
-	while (temp != -1)
+	//while (temp != -1)
+	//{
+	//	scanf("%d",&temp);
+	//	arr[count] = temp;
+	//	count++;
+	//}
+	//for (int i = 0; i < count; i++)
+	//{
+	//	printf("%d ", arr[i]);
+	//}
+
+	//用户输入一些字符 #结束 动态分配
+	char ch = 0;//存放当前输入
+	while (ch != '#')
 	{
-		scanf("%d ",&temp);
-		arr[count] = temp;
-		count++;
+		scanf("%c", &ch);
+		p = (char*)malloc(sizeof(char));//申请一个字节
 	}
 }
