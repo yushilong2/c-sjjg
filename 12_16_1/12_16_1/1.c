@@ -45,6 +45,24 @@ typedef struct STU
 #define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
 #include<stdlib.h>
+
+typedef struct node
+{
+	int data;
+	struct node* next;
+}node, * pnode;
+
+pnode creat()
+{
+	pnode head, temp, newNode;
+
+	head = (pnode)malloc(sizeof(node));
+	head->next = NULL;
+}
+
+//node//struct node
+//pnode//struct node*
+
 int main()
 {
 	//用户输入一些数据 int 数组方式来做 -1结束输入
@@ -65,9 +83,9 @@ int main()
 
 	//用户输入一些字符 #结束 动态分配
 	char ch = 0;//存放当前输入
-	while (ch != '#')
+	while ((ch = getchar()) != '#')//不是#就循环
 	{
-		scanf("%c", &ch);
-		p = (char*)malloc(sizeof(char));//申请一个字节
+
+		newNode = (char*)malloc(sizeof(char));//申请一个字节
 	}
 }
