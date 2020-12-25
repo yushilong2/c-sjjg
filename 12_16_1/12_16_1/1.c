@@ -87,5 +87,5 @@ int main()
 	{
 
 		newNode = (char*)malloc(sizeof(char));//ÉêÇëÒ»¸ö×Ö½Ú
-	}
+	}   //
 }
