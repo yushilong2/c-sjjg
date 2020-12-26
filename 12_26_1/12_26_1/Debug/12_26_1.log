@@ -1,0 +1,7 @@
+﻿  1.c
+  DynamicArray.c
+D:\q\c-sjjg\12_26_1\12_26_1\DynamicArray.c(98,12): warning C4098: “Print_Array”:“void”函数返回值
+D:\q\c-sjjg\12_26_1\12_26_1\DynamicArray.c(112,12): warning C4098: “FreeSpace_Array”:“void”函数返回值
+D:\q\c-sjjg\12_26_1\12_26_1\DynamicArray.c(126,12): warning C4098: “Clear_Array”:“void”函数返回值
+  正在生成代码...
+  12_26_1.vcxproj -> D:\q\c-sjjg\12_26_1\Debug\12_26_1.exe
