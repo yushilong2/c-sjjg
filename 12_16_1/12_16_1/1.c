@@ -51,17 +51,29 @@ typedef struct node
 	int data;
 	struct node* next;
 }node, * pnode;
+//node//struct node
+//pnode//struct node*
 
+//建表
 pnode creat()
 {
 	pnode head, temp, newNode;
-
+	char ch = 0;
 	head = (pnode)malloc(sizeof(node));
 	head->next = NULL;
+	temp = head;
+	while ((ch = getchar()) != '#')//不是#就循环
+	{
+
+		newNode = (char*)malloc(sizeof(char));//申请一个字节
+		newNode->data = ch;
+		temp->next = newNode;
+		temp = newNode;
+	}
+	return head;
 }
 
-//node//struct node
-//pnode//struct node*
+
 
 int main()
 {
@@ -82,10 +94,12 @@ int main()
 	//}
 
 	//用户输入一些字符 #结束 动态分配
-	char ch = 0;//存放当前输入
-	while ((ch = getchar()) != '#')//不是#就循环
-	{
 
-		newNode = (char*)malloc(sizeof(char));//申请一个字节
-	}   //
+	pnode myhead = creat();
+	pnode temp = myhead->next;
+	while (temp)
+	{
+		printf("%c ", temp->data);
+		temp = temp->next;
+	}
 }
