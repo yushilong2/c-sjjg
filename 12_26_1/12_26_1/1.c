@@ -8,3 +8,4 @@ int main(void)
 	system("pause");
 	return;
 }
+¡¢¡¢
