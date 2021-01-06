@@ -2,7 +2,7 @@
 * 数据结构的基本结构：链式结构
 */
 #include"singleList.h"
-struct Node* list = createList();
+struct Node* list=NULL;
 void systemMenu()
 {
 	printf("----------------【学生管理系统】----------------\n");
@@ -13,7 +13,6 @@ void systemMenu()
 	printf("\t\t4.修改信息\n");
 	printf("\t\t5.查找信息\n");
 	printf("\t\t6.保存信息\n");
-	//隐藏功能：同步文件
 	printf("------------------------------------------------\n");
 	printf("请输入(0-6):");
 }
@@ -42,8 +41,8 @@ void keyDown()
 	case 3:
 		printf("\t\t3.删除信息\n");
 		printf("请输入要删除的学生姓名：");
-		scanf("%s", tempData.num);
-		deleteNodeByName(list, tempData.num);
+		scanf("%s", tempData.name);
+		deleteNodeByName(list, tempData.name);
 		break;
 	case 4:
 		printf("\t\t4.修改信息\n");
@@ -62,7 +61,7 @@ void keyDown()
 		break;
 	case 5:
 		printf("\t\t5.查找信息\n");
-		printf("请输入需要查找的学号：\n");
+		printf("请输入需要查找的学号：");
 		scanf("%s", tempData.num);
 		if (searchByNum(list, tempData.num) == NULL)
 		{
@@ -74,12 +73,14 @@ void keyDown()
 		}
 		break;
 	case 6:
+		printf("\t\t6.保存信息\n");
 		saveFile("student.txt", list);
-			break;
+		printf("\t\t保存成功\n");
+		break;
 	default:
-		printf("输入错误，请重新输入\n");
+		printf("输入错误，请重新输入");
 	}
-}
+	}
 
 int main()
 {

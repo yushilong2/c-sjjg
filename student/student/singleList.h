@@ -2,6 +2,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
+#define LEN sizeof(struct Node)
 //写数据结构
 //1.抽象单一个体
 //2.描述最初状态：初始化--->初始化变量
@@ -11,7 +12,7 @@
 //学号、学院、专业、姓名、年龄、学分
 struct student
 {
-	char num[10];
+	char num[12];
 	char college[20];
 	char major[20];
 	char name[20];
@@ -46,6 +47,7 @@ struct Node* createNode(struct student data)
 	newNode->next = NULL;
 	return newNode;
 }
+
 
 //插入链表,录入信息
 void insertNodeByHead(struct Node* listHeadNode, struct student data)
@@ -92,7 +94,7 @@ struct Node* searchByNum(struct Node* listHeadNode, char* num)
 	}
 	else
 	{
-		while (strcmp(pMove->data.num, num))
+		while (strcmp(pMove->data.num,num))
 		{
 			pMove = pMove->next;
 			if (pMove == NULL)
@@ -103,40 +105,26 @@ struct Node* searchByNum(struct Node* listHeadNode, char* num)
 		return pMove;
 	}
 }
+//打印：
 void printSearchNode(struct Node* curNod)
 {
 	printf("学号\t学院\t专业\t姓名\t年龄\t学分\n");
-	printf("%s\t%s\t%s\t%s\t%d\t%f\t", curNod->data.num, curNod->data.college, curNod->data.major, curNod->data.name, curNod->data.age, curNod->data.grade);
+	printf("%s\t%s\t%s\t%s\t%d\t%f\t\n", curNod->data.num, curNod->data.college, curNod->data.major, curNod->data.name, curNod->data.age, curNod->data.grade);
 }
 
-//打印：浏览信息
+//浏览信息
 void printList(struct Node* listHeadNode)
 {
 	struct Node* pMove = listHeadNode->next;
 	printf("学号\t学院\t专业\t姓名\t年龄\t学分\n");
 	while (pMove)
 	{
-		printf("%s\t%s\t%s\t%s\t%d\t%f\t",pMove->data.num,pMove->data.college,pMove->data.major,pMove->data.name,pMove->data.age,pMove->data.grade);
+		printf("%s\t%s\t%s\t%s\t%d\t%f\t\n",pMove->data.num,pMove->data.college,pMove->data.major,pMove->data.name,pMove->data.age,pMove->data.grade);
 		pMove = pMove->next;
 	}
 	printf("\n");
 }
 //保存
-void readFile(const char* fileName, struct Node* listHeadNode)
-{
-	FILE* fp = fopen(fileName, "r");
-	if (fp == NULL)
-	{
-		fp = fopen(fileName, "w");
-	}
-	struct student tempData;
-	while(fscanf(fp, "%s\t%s\t%s\t%s\t%d\t%f\n", tempData.num, tempData.college, tempData.major, tempData.name, &tempData.age, &tempData.grade) != EOF)
-	{
-		insertNodeByHead(listHeadNode, tempData);
-		memset(&tempData, 0, sizeof(tempData));
-	}
-	fclose(fp);
-}
 void saveFile(const char* fileName, struct Node* listHeadNode)
 {
 	FILE* fp = fopen(fileName, "w");
@@ -147,7 +135,7 @@ void saveFile(const char* fileName, struct Node* listHeadNode)
 	struct Node* pMove = listHeadNode->next;
 	while (pMove)
 	{
-		fprintf(fp,"%s\t%s\t%s\t%s\t%d\t%f\t", pMove->data.num, pMove->data.college, pMove->data.major, pMove->data.name, pMove->data.age, pMove->data.grade);
+		fprintf(fp,"%s\t%s\t%s\t%s\t%d\t%f\t\n", pMove->data.num, pMove->data.college, pMove->data.major, pMove->data.name, pMove->data.age, pMove->data.grade);
 		pMove = pMove->next;
 	}
 	fclose(fp);
