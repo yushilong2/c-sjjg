@@ -2,7 +2,6 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
-#define LEN sizeof(struct Node)
 //写数据结构
 //1.抽象单一个体
 //2.描述最初状态：初始化--->初始化变量
