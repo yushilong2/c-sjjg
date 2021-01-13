@@ -1,0 +1,6 @@
+﻿  SeqList.cpp
+  main.cpp
+D:\q\c-sjjg\SeqList\SeqList\main.cpp(4,1): warning C4326: “main”的返回类型应为“int”而非“void”
+D:\q\c-sjjg\SeqList\SeqList\main.cpp(5,10): warning C4101: “mylist”: 未引用的局部变量
+  正在生成代码...
+  SeqList.vcxproj -> D:\q\c-sjjg\SeqList\Debug\SeqList.exe
