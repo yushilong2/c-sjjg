@@ -2,5 +2,5 @@
 
 void InitSeqlist(SeqList* list)
 {
-	list->base=malloc()
+	list->base=(int*)malloc(sizeof(int))
 }
