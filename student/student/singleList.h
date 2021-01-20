@@ -23,9 +23,6 @@ struct Node
 	struct student data;
 	struct Node* next;
 };
-//1.1 链表是什么：结构体变量和结构体变量链接在一起
-//1.2 指针第二种变为变量的方式：动态内存申请
-//1.3 用第一个结点表示整个链表
 
 struct Node* createList()
 {
