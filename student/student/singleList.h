@@ -26,9 +26,6 @@ struct Node
 
 struct Node* createList()
 {
-	//有表头链表：第一个结点不存储数据
-	//无表头链表：第一个结点存储数据
-	//1.产生一个结构体变量
 	struct Node* listHeadNode = (struct Node*)malloc(sizeof(struct Node));
 	//初始化一个变量
 	listHeadNode->next = NULL;
