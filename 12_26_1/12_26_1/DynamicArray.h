@@ -5,11 +5,6 @@
 #include<stdlib.h>
 #include<string.h>
 
-//动态增长内存，策略 将存放数据的内存放到那？堆上
-//动态数组 如果5个元素 申请内存 拷贝数据 释放内存
-//容量capacity表示这块内存空间一共可以存放多少元素
-//size概念 记录当前数组中具体的元素个数
-
 //动态数组结构体定义
 typedef struct DYNAMICARRAY
 {
