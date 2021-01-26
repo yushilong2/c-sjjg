@@ -140,9 +140,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.c" />
+    <ClCompile Include="SequenceList.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DataElement.h" />
+    <ClInclude Include="SequenceList.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
