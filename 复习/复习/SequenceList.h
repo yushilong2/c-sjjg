@@ -16,3 +16,15 @@ void InitList(SeqList* seqList, ElementType* elemArray, int length);
 * @param element	要插入的元素
 */
 void InsertElement(SeqList* seqList, int index, ElementType element);
+
+ElementType* GetElement(SeqList* seqList, int index);
+
+/*
+* 删除顺序表中指定下标的元素
+* @param seqList	要操作的顺序表
+* @param index		要删除的下标
+* @return			返回删除的元素
+*/
+ElementType* DeleteElement(SeqList* seqList, int index);
+
+void PrintList(SeqList* seqList);

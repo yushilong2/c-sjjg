@@ -1,0 +1,8 @@
+﻿  main.c
+D:\q\c-sjjg\复习\复习\main.c(17,10): warning C4013: “InitList”未定义；假设外部返回 int
+D:\q\c-sjjg\复习\复习\main.c(18,8): warning C4013: “printf”未定义；假设外部返回 int
+D:\q\c-sjjg\复习\复习\main.c(19,11): warning C4013: “PrintList”未定义；假设外部返回 int
+D:\q\c-sjjg\复习\复习\main.c(21,28): warning C4013: “DeleteElement”未定义；假设外部返回 int
+D:\q\c-sjjg\复习\复习\main.c(21,41): warning C4047: “=”:“ElementType *”与“int”的间接级别不同
+D:\q\c-sjjg\复习\复习\main.c(26,6): warning C4013: “free”未定义；假设外部返回 int
+  复习.vcxproj -> D:\q\c-sjjg\复习\Debug\复习.exe
