@@ -101,3 +101,31 @@ void PrintList(SeqList* seqList)
 		printf("%d\t%s\n", seqList->datas[i].id, seqList->datas[i].name);
 	}
 }
+
+/*
+* 返回顺序表的长度
+*/
+int GetLength(SeqList* seqlist)
+{
+	if (seqlist == NULL)
+		return 0;
+	return seqlist->length;
+}
+
+/*
+* 返回顺序表是否为空
+*/
+int IsEmpty(SeqList* seqlist)
+{
+	return GetLength(seqlist) == 0 ? TURE : FALSE;
+}
+
+/*
+* 清空顺序表
+*/
+void ClearList(SeqList* seqlist)
+{
+	if (seqlist == NULL)
+		return;
+	seqlist->length = 0;
+}

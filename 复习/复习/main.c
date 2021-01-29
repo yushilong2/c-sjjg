@@ -25,4 +25,3 @@ void TestSequenceList()
 	printf("%d\t%s\n", delElement->id, delElement->name);
 	free(delElement);	//一定要记得释放内存
 }
-//

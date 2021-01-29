@@ -1,6 +1,8 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include"DataElement.h"
+#define TURE 1
+#define FALSE 0
 
 /*
 *初始化顺序表
@@ -26,5 +28,20 @@ ElementType* GetElement(SeqList* seqList, int index);
 * @return			返回删除的元素
 */
 ElementType* DeleteElement(SeqList* seqList, int index);
+
+/*
+* 返回顺序表的长度
+*/
+int GetLength(SeqList* seqlist);
+
+/*
+* 返回顺序表是否为空
+*/
+int IsEmpty(SeqList* seqlist);
+
+/*
+* 清空顺序表
+*/
+void ClearList(SeqList* seqlist);
 
 void PrintList(SeqList* seqList);
