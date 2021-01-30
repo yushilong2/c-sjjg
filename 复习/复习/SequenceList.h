@@ -1,8 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include"DataElement.h"
-#define TURE 1
-#define FALSE 0
 
 /*
 *³õÊ¼»¯Ë³Ðò±í
